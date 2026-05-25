@@ -1,0 +1,9 @@
+{
+  "type": "eternal_tinker:smithing_tinker",
+  "base": {
+    "item": "minecraft:diamond_sword"
+  },
+  "addition": {
+    "item": "minecraft:netherite_ingot"
+  }
+}

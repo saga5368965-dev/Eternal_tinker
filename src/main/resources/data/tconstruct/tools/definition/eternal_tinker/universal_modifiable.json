@@ -4,9 +4,9 @@
     "eternal_tinker:universal_tic_item"
   ],
   "slots": {
-    "upgrade": 5,
-    "ability": 2,
-    "defense": 2
+    "head": 1,
+    "handle": 1,
+    "extra": 1
   },
   "stats": {
     "durability": {
@@ -30,5 +30,9 @@
     "harvest_tier": "minecraft:stone",
     "can_lose_modifiers": false,
     "display_color": -1
+  },
+  "rarity": {
+    "weight": 0,
+    "slots": 0
   }
 }

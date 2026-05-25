@@ -1,0 +1,9 @@
+{
+  "item.eternal_tinker.eternal_core": "エターナル・コア",
+  "item.eternal_tinker.universal_modifiable": "ユニバーサル・モディファイア",
+  "item.eternal_tinker.universal_tic_item": "ユニバーサルTICアイテム",
+  "itemGroup.eternal_tinker.eternal_tinker_tab": "エターナルティンカー",
+  "modifier.eternal_tinker.eternal_capacity": "限界突破",
+  "modifier.eternal_tinker.eternal_capacity.flavor": "このツールは永遠の進化を受け入れた。",
+  "modifier.eternal_tinker.eternal_capacity.description": "スロット数の制限を完全に排除し、無限の改造を可能にします。"
+}

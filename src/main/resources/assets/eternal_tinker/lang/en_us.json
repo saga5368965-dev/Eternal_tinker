@@ -1,0 +1,9 @@
+{
+  "item.eternal_tinker.eternal_core": "Eternal Core",
+  "item.eternal_tinker.universal_modifiable": "Universal Modifier",
+  "item.eternal_tinker.universal_tic_item": "Universal TiC Item",
+  "itemGroup.eternal_tinker.eternal_tinker_tab": "Eternal Tinker",
+  "modifier.eternal_tinker.eternal_capacity": "Limit Break",
+  "modifier.eternal_tinker.eternal_capacity.flavor": "This tool has accepted eternal evolution.",
+  "modifier.eternal_tinker.eternal_capacity.description": "Completely removes slot limitations, allowing infinite modifications."
+}

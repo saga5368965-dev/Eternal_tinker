@@ -5,8 +5,10 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "eternal_tinker.refmap.json",
   "mixins": [
+    "ItemStackMixin"
   ],
   "client": [
+    "client.ItemModelResolverMixin"
   ],
   "injectors": {
     "defaultRequire": 1

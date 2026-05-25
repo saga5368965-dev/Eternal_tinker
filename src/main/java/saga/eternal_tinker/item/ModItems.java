@@ -1,28 +1,29 @@
-package saga.eternal_tinker;
+package saga.eternal_tinker.item;
 
-import com.mojang.logging.LogUtils;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.slf4j.Logger;
-import saga.eternal_tinker.item.ModItems;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
+import saga.eternal_tinker.Eternal_tinker;
+import slimeknights.tconstruct.library.tools.definition.ToolDefinition;
 
+public class ModItems {
+    public static final DeferredRegister<Item> ITEMS =
+            DeferredRegister.create(ForgeRegistries.ITEMS, Eternal_tinker.MODID);
 
-@Mod(Eternal_tinker.MODID)
-public class Eternal_tinker {
-    public static final String MODID = "eternal_tinker";
-    public static final Logger LOGGER = LogUtils.getLogger();
+    // ToolDefinitionの作成
+    private static final ToolDefinition UNIVERSAL_MODIFIABLE = ToolDefinition.create(
+            new ResourceLocation(Eternal_tinker.MODID, "universal_modifiable"));
 
-    public Eternal_tinker() {
-        // Forge の Mod イベントバスを取得
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    // アイテムの登録 - これが最重要！
+    public static final RegistryObject<UniversalModifiableItem> UNIVERSAL_TIC_ITEM =
+            ITEMS.register("universal_tic_item",
+                    () -> new UniversalModifiableItem(new Item.Properties().stacksTo(1).rarity(Rarity.EPIC), UNIVERSAL_MODIFIABLE));
 
-        // アイテムレジストリをイベントバスに登録
-        ModItems.register(modEventBus);
-        LOGGER.info("Eternal Tinker: Item Registry has been engaged.");
-
-        // クリエイティブタブ等の登録（必要に応じて後ほどmodEventBusへ追加）
-        LOGGER.info("Eternal Tinker: Modifier Registry has been engaged.");
-        LOGGER.info("Eternal Tinker: Creative Tab Registry has been engaged.");
+    public static void register(IEventBus eventBus) {
+        ITEMS.register(eventBus);
     }
 }
